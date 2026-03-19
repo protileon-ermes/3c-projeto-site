@@ -71,7 +71,7 @@ function editUser(string $dataFile, ?int $id, ?array $input, bool $partial = fal
     return ['status' => 200, 'user' => $user];
 }
 
-function deleteUser(string $dataFile, ?int $id){
+function removeUser(string $dataFile, ?int $id){
     if ($id === null) {
         return ['status' => 400, 'error' => 'User ID is required'];
     }

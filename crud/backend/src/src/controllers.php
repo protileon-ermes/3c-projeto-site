@@ -56,7 +56,7 @@ function handlePatch(string $dataFile) : void {
 function handleDelete(string $dataFile) : void {
     try {
         $id = isset($_GET['id']) ? (int)$_GET['id'] : null;
-        respond(deleteUser($dataFile, $id));
+        respond(removeUser($dataFile, $id));
     } catch (Throwable $e) {
         http_response_code(500);
         echo json_encode(['error' => 'internal server error']);

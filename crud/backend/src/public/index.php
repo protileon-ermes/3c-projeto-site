@@ -21,6 +21,7 @@ $uri = strtok($_SERVER['REQUEST_URI'], '?');
 
 match ($uri) {
     '/api/users' => require_once __DIR__ . '/../src/api.php',
+    '/swagger' => require_once __DIR__ . '/swagger-ui.html',
     default => notFound()
 };
 
